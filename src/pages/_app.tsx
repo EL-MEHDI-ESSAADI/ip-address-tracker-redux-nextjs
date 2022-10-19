@@ -1,4 +1,5 @@
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
+import { wrapper } from 'store'
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -20,7 +21,7 @@ const theme: ThemeInterface = {
   },
 }
 
-export default function App({ Component, pageProps }) {
+function App({ Component, pageProps }) {
   return (
     <>
       <GlobalStyle />
@@ -30,3 +31,5 @@ export default function App({ Component, pageProps }) {
     </>
   )
 }
+
+export default (wrapper.withRedux(App))

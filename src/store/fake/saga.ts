@@ -5,6 +5,6 @@ function* logUser(action: { type: string; payload: string }) {
    console.log(action.payload);
 }
 
-export function* watchChangeUserName() {
+export default function* fakeSaga() {
    yield takeEvery(actionTypes.CHANGE_USER_NAME, logUser);
 }
