@@ -3,6 +3,7 @@ import { actionTypes } from "./actions";
 
 function* logUser(action: { type: string; payload: string }) {
    console.log(action.payload);
+   console.log("action.payload");
 }
 
 export default function* fakeSaga() {
